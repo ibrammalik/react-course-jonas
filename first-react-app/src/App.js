@@ -19,15 +19,15 @@ export default function App() {
     <div>
       <h1>{advice}</h1>
       <button onClick={getAdvice}>Get Advice</button>
-      <Message />
+      <Message count={count} />
     </div>
   );
 }
 
-function Message() {
+function Message(props) {
   return (
     <p>
-      You have read <strong>{count}</strong> pieces of advice
+      You have read <strong>{props.count}</strong> pieces of advice
     </p>
   );
 }
